@@ -9,6 +9,9 @@ export class Program {
   @Column()
   name: string;
 
+  @Column()
+  description: string;
+
   @ManyToMany((type) => User, (user) => user.subscriptions)
   subscribers: User[];
 }
