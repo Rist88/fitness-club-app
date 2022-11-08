@@ -5,7 +5,7 @@ import {
   ManyToMany,
   PrimaryGeneratedColumn,
 } from 'typeorm';
-import { Program } from './program.entity';
+import { Program } from '../../programs/entities/program.entity';
 
 @Entity('users')
 export class User {
@@ -23,7 +23,7 @@ export class User {
 
   @JoinTable()
   @ManyToMany((type) => Program, (program) => program.subscribers)
-  subscriptions: Program[];
+  subscriptions?: Program[];
 
   @Column()
   userRole: 'coach' | 'user';
