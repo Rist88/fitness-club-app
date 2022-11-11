@@ -29,7 +29,7 @@ export class UsersService {
       },
     });
     if (!user) {
-      throw new HttpException(`User #${id} not found`, HttpStatus.BAD_REQUEST);
+      throw new NotFoundException(`User #${id} not found`);
     }
     return user;
   }
@@ -57,7 +57,7 @@ export class UsersService {
       },
     });
     if (!user) {
-      throw new NotFoundException(`Coudn't remove user #${id}`);
+      throw new NotFoundException(`User #${id} do not exist`);
     }
     return this.userRepository.remove(user);
   }
