@@ -1,5 +1,13 @@
 .App {
-  text-align: center;
+  text-align: left;
+}
+
+.App h4 {
+  margin-bottom: 0.5em;
+}
+
+.App p {
+  margin-top: 0;
 }
 
 .App-logo {
