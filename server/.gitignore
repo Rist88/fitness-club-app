@@ -41,3 +41,4 @@ lerna-debug.log*
 
 # Temporary files & files in active development
 /db
+/src/auth
