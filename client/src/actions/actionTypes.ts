@@ -1,0 +1,3 @@
+export const actionTypes = {
+  PROGRAMS_FETCH_SUCCEEDED: 'PROGRAMS_FETCH_SUCCEEDED',
+};

@@ -1,7 +1,8 @@
 import React, { useEffect } from 'react';
 import './App.css';
 import { Provider, useSelector, useDispatch } from 'react-redux';
-import { selectPrograms, store } from './lib/store';
+import { store } from './store';
+import { selectPrograms } from './selectors';
 
 function FitnessClubApp() {
   const dispatch = useDispatch();
@@ -14,9 +15,9 @@ function FitnessClubApp() {
 
   return (
     <>
-      <div className='App'>
+      <div className='programs'>
         {programs?.map(program => (
-          <div key={program.id}>
+          <div className='program-container' key={program.id}>
             <h4>{program.name}</h4>
             <p>{program.description}</p>
           </div>
