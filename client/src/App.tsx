@@ -3,6 +3,7 @@ import './App.css';
 import { Provider, useSelector, useDispatch } from 'react-redux';
 import { store } from './store';
 import { selectPrograms } from './selectors';
+import { actionTypes } from './actions/actionTypes';
 
 function FitnessClubApp() {
   const dispatch = useDispatch();
@@ -10,7 +11,7 @@ function FitnessClubApp() {
 
   useEffect(() => {
     // console.log(programs);
-    dispatch({ type: 'PROGRAMS_FETCH_SUCCEEDED' });
+    dispatch({ type: actionTypes.PROGRAMS_FETCH_SUCCEEDED });
   }, []);
 
   return (
