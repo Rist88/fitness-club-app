@@ -1,3 +1,7 @@
-export const actionTypes = {
-  PROGRAMS_FETCH_SUCCEEDED: 'PROGRAMS_FETCH_SUCCEEDED',
+export const sagaActionTypes = {
+  GET_PROGRAMS_REQUEST: 'GET_PROGRAMS_REQUEST',
+};
+
+export const reduxActionTypes = {
+  SET_PROGRAMS: 'SET_PROGRAMS',
 };

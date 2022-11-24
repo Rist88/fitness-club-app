@@ -1,6 +1,11 @@
 import { Program } from '../config/types';
-import { actionTypes } from './actionTypes';
+import { reduxActionTypes, sagaActionTypes } from './actionTypes';
 
-export const actions = {
-  getProgramsAction: (programs: Program[]) => ({ type: actionTypes.PROGRAMS_FETCH_SUCCEEDED, payload: programs }),
-};
+export const actionSetPrograms = (programs: Program[]) => ({
+  type: reduxActionTypes.SET_PROGRAMS,
+  payload: programs,
+});
+
+export const actionGetPrograms = () => ({
+  type: sagaActionTypes.GET_PROGRAMS_REQUEST,
+});

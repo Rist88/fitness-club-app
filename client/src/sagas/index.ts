@@ -1,15 +1,15 @@
 import { put, takeEvery } from 'redux-saga/effects';
-import { actions } from '../actions';
-import { actionTypes } from '../actions/actionTypes';
+import { actionSetPrograms } from '../actions';
+import { sagaActionTypes } from '../actions/actionTypes';
 import { Program } from '../config/types';
 import { getPrograms } from '../services/api';
 
 export function* rootSaga() {
-  yield takeEvery(actionTypes.PROGRAMS_FETCH_SUCCEEDED, getProgramsSaga);
+  yield takeEvery(sagaActionTypes.GET_PROGRAMS_REQUEST, getProgramsSaga);
 }
 
 function* getProgramsSaga() {
   const programs: Program[] = yield getPrograms();
 
-  yield put(actions.getProgramsAction(programs));
+  yield put(actionSetPrograms(programs));
 }
