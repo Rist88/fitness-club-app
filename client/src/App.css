@@ -1,5 +1,29 @@
 .App {
-  text-align: center;
+  text-align: left;
+}
+
+.programs {
+  display: flex;
+  flex-direction: column;
+}
+
+.program-container {
+  display: grid;
+  grid-template-areas: 'name description';
+  align-items: center;
+  border: 1px #000 solid;
+  margin: 0.5em;
+  padding: 0.3em;
+}
+
+.program-container h4 {
+  grid-area: name;
+}
+
+.program-container p {
+  grid-area: description;
+  margin-top: 0;
+  margin-bottom: 0.3em;
 }
 
 .App-logo {

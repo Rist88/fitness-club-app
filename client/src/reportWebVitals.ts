@@ -1,6 +1,6 @@
 import { ReportHandler } from 'web-vitals';
 
-const reportWebVitals: Function = (onPerfEntry?: ReportHandler) => {
+const reportWebVitals: any = (onPerfEntry?: ReportHandler) => {
   if (onPerfEntry != null && onPerfEntry instanceof Function) {
     import('web-vitals')
       .then(({ getCLS, getFID, getFCP, getLCP, getTTFB }) => {
@@ -10,7 +10,7 @@ const reportWebVitals: Function = (onPerfEntry?: ReportHandler) => {
         getLCP(onPerfEntry);
         getTTFB(onPerfEntry);
       })
-      .catch((err) => console.log(err));
+      .catch(err => console.log(err));
   }
 };
 
